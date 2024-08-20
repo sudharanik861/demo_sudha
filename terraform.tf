@@ -1,6 +1,22 @@
-provider "azurerm" {
-  features {}
+terraform{
+    backend "azurerm"{
+
+    }
+  }
+terraform{
+  requireq_version">= 0.12"
 }
+provider "azurerm" {
+  
+  version = ~>2.0
+  #subscription_id="5668e63a-a9e3-40bf-8047-7a07999e5edd"
+  #tenant_id=""
+  #client_id=""
+  #client_secret=""
+  features {
+  } 
+}
+
 
 # Define variables for user input
 variable "username" {
